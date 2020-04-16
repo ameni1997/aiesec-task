@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<div class="container my-5">
+
+    <h5 href="#" class="text-primary">Ep details</h5>
+    <div class="row" class="table-responsive" >
+        <div class="col">
+            <div *ngIf="eplist.length == 0" class="alert alert-warning">ep not found</div>
+            <table *ngIf="eplist.length > 0" class="table table-bordered  table-striped ">
+                <thead style="background-color: #2494f0;">
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>surname</th>
+                        <th>gender</th>
+                        <th>email</th>
+                        <th>phone_number</th>
+                        <th>url</th>
+                        <th>year_of_study</th>
+                        <th>university</th>
+                        <th>communication_preference</th>
+                        <th>manager</th>
+                        <th>manager_cover_photo</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ep of eplist">
+                        <th>{{ ep.id }}</th>
+                        <td>{{ ep.name }}</td>
+                        <td>{{ ep.surname }}</td>
+                        <td>{{ ep.gender }}</td>
+                        <td>{{ ep.email }}</td>
+                        <td>{{ ep.phone_number }}</td>
+                        <td>{{ ep.url }}</td>
+                        <td>{{ ep.year_of_study }}</td>
+                        <td>{{ ep.university }}</td>
+                        <td>{{ ep.communication_preference }}</td>
+                        <td>{{ ep.manager }}</td>
+                        <td>{{ ep.manager_cover_photo }}</td>
+                        <td>{{ ep.status }}</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
